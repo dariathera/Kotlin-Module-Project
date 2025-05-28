@@ -69,7 +69,6 @@ class NoteCommandMenu {
                             if (!text.isEmpty()) {
                                 content.get(archiveName)!![targetKey] += " " + text
                                 println("Текст добавлен, изменения сохранены")
-
                             }
                         }
                     )
