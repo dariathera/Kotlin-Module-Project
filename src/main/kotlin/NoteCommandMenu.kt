@@ -57,8 +57,6 @@ class NoteCommandMenu {
                             }
                         },
                         map = content.get(archiveName)!!,
-
-                        // Нужны изменения!!!!!
                         printContent =  { targetKey ->
                             println()
                             println("Заметка")
