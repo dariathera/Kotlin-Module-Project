@@ -34,7 +34,7 @@ class ReusableCode {
                     println("Вам следует ввести номер команды")
                     continue
                 }
-                if (commandNumber !in 0..content.size) {
+                if (commandNumber !in 0..map.size) {
                     println("Недопустимый номер команды.")
                     continue
                 }

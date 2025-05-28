@@ -57,7 +57,21 @@ class NoteCommandMenu {
                             }
                         },
                         map = content.get(archiveName)!!,
-                        printContent =  { targetKey -> println(content.get(archiveName)!![targetKey]) }
+
+                        // Нужны изменения!!!!!
+                        printContent =  { targetKey ->
+                            println()
+                            println("Заметка")
+                            println("Название: $targetKey")
+                            println("Содержание: ${content.get(archiveName)!![targetKey]}")
+                            println("Если вы хотите дополнить заметку, введите текст ниже")
+                            val text = Scanner(System.`in`).nextLine().trim()
+                            if (!text.isEmpty()) {
+                                content.get(archiveName)!![targetKey] += " " + text
+                                println("Текст добавлен, изменения сохранены")
+
+                            }
+                        }
                     )
                 }
             } while (true)
